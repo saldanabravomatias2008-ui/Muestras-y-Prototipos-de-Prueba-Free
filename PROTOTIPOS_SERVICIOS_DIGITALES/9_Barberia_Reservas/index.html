@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Pro - Sistema de Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">💈 Barbería Pro</div>
+            <div class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#reservar">Reservar</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="servicios" class="servicios">
+        <h1>Nuestros Servicios</h1>
+        <div class="servicios-grid">
+            <div class="servicio">
+                <div class="servicio-icon">✂️</div>
+                <h3>Corte Clásico</h3>
+                <p>$15.00</p>
+                <small>20 minutos</small>
+            </div>
+            <div class="servicio">
+                <div class="servicio-icon">🧔</div>
+                <h3>Barba Completa</h3>
+                <p>$25.00</p>
+                <small>30 minutos</small>
+            </div>
+            <div class="servicio">
+                <div class="servicio-icon">💇</div>
+                <h3>Peinado Premium</h3>
+                <p>$35.00</p>
+                <small>40 minutos</small>
+            </div>
+            <div class="servicio">
+                <div class="servicio-icon">🎨</div>
+                <h3>Diseño Personalizado</h3>
+                <p>$40.00</p>
+                <small>45 minutos</small>
+            </div>
+            <div class="servicio">
+                <div class="servicio-icon">💆</div>
+                <h3>Masaje Facial</h3>
+                <p>$20.00</p>
+                <small>15 minutos</small>
+            </div>
+            <div class="servicio">
+                <div class="servicio-icon">🧴</div>
+                <h3>Tratamiento Capilar</h3>
+                <p>$30.00</p>
+                <small>25 minutos</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservar" class="reservar">
+        <h2>Reserva tu Cita</h2>
+        <div class="reserva-container">
+            <form id="form-reserva" class="form-reserva">
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo:</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Servicio:</label>
+                    <select required>
+                        <option>Selecciona un servicio</option>
+                        <option>Corte Clásico - $15.00</option>
+                        <option>Barba Completa - $25.00</option>
+                        <option>Peinado Premium - $35.00</option>
+                        <option>Diseño Personalizado - $40.00</option>
+                        <option>Masaje Facial - $20.00</option>
+                        <option>Tratamiento Capilar - $30.00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha:</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Hora:</label>
+                    <input type="time" required>
+                </div>
+                <div class="form-group">
+                    <label>Barbero (opcional):</label>
+                    <select>
+                        <option>Cualquiera</option>
+                        <option>Juan (⭐⭐⭐⭐⭐)</option>
+                        <option>Carlos (⭐⭐⭐⭐⭐)</option>
+                        <option>Miguel (⭐⭐⭐⭐⭐)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-reservar">Confirmar Reserva</button>
+            </form>
+
+            <div class="reservas-proximas">
+                <h3>Tus Próximas Citas</h3>
+                <div id="citas-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto-info">
+            <div>
+                <h3>📍 Ubicación</h3>
+                <p>Calle Principal 456, Ciudad</p>
+            </div>
+            <div>
+                <h3>📱 Teléfono</h3>
+                <p>+1 (555) 987-6543</p>
+            </div>
+            <div>
+                <h3>🕐 Horarios</h3>
+                <p>Lun-Viernes: 9:00 AM - 8:00 PM<br>Sábado: 10:00 AM - 6:00 PM<br>Domingo: Cerrado</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Barbería Pro. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.hero {
+    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn-registro {
+    background: white;
+    color: #e94560;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-registro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.clases {
+    padding: 80px 20px;
+    background: #f9f9f9;
+}
+
+.clases h2, .membresias h2, .entrenadores h2, .beneficios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a1a2e;
+}
+
+.clases-grid, .membresias-grid, .entrenadores-grid, .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.clase, .beneficio {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.clase:hover, .beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.clase-icon, .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.clase h3, .beneficio h3 {
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.clase p, .beneficio p {
+    color: #666;
+}
+
+.clase small {
+    color: #999;
+}
+
+.membresias {
+    padding: 80px 20px;
+}
+
+.membresia {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.membresia:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.membresia.destacada {
+    border: 2px solid #e94560;
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e94560;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.membresia h3 {
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.precio {
+    font-size: 2.5rem;
+    color: #e94560;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.precio span {
+    font-size: 1rem;
+    color: #999;
+}
+
+.membresia ul {
+    list-style: none;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.membresia li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.btn-seleccionar {
+    background: #e94560;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-seleccionar:hover {
+    background: #d63450;
+    transform: translateY(-2px);
+}
+
+.btn-premium {
+    background: white;
+    color: #e94560;
+    border: 2px solid #e94560;
+}
+
+.btn-premium:hover {
+    background: #e94560;
+    color: white;
+}
+
+.entrenadores {
+    padding: 80px 20px;
+    background: #f9f9f9;
+}
+
+.entrenador {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.avatar {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.entrenador h3 {
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.experiencia {
+    color: #e94560;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.rating {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.beneficios {
+    padding: 80px 20px;
+}
+
+footer {
+    background: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .membresia.destacada {
+        transform: scale(1);
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

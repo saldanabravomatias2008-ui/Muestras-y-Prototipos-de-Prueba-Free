@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos - WhatsApp Integration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Sistema de Pedidos por WhatsApp</h1>
+        
+        <div class="pedidos-container">
+            <div class="formulario-pedido">
+                <h2>Realizar Pedido</h2>
+                <form id="form-pedido">
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    <input type="email" id="email" placeholder="Tu email" required>
+                    <input type="tel" id="telefono" placeholder="Tu teléfono" required>
+                    
+                    <textarea id="pedido" placeholder="Describe tu pedido" required></textarea>
+                    
+                    <div class="productos-lista">
+                        <label><input type="checkbox" value="Hamburguesa" data-precio="12.99"> Hamburguesa ($12.99)</label>
+                        <label><input type="checkbox" value="Pizza" data-precio="18.99"> Pizza ($18.99)</label>
+                        <label><input type="checkbox" value="Ensalada" data-precio="8.99"> Ensalada ($8.99)</label>
+                        <label><input type="checkbox" value="Bebida" data-precio="3.99"> Bebida ($3.99)</label>
+                    </div>
+                    
+                    <p class="total">Total: $<span id="total">0.00</span></p>
+                    
+                    <button type="button" class="btn-whatsapp" onclick="enviarPorWhatsApp()">
+                        💬 Enviar por WhatsApp
+                    </button>
+                </form>
+            </div>
+
+            <div class="historial">
+                <h2>Historial de Pedidos</h2>
+                <div id="historial-pedidos"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

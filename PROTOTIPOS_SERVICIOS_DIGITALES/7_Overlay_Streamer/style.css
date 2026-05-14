@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.streamer-overlay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.preview-area h2, .control-panel h2 {
+    margin-bottom: 1rem;
+    color: #6B5FFF;
+    font-size: 1.5rem;
+}
+
+/* Preview Area */
+.overlay-preview {
+    background: linear-gradient(135deg, rgba(107, 95, 255, 0.2), rgba(255, 95, 109, 0.2));
+    border: 2px solid #6B5FFF;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.donaciones-box, .redes-sociales, .chat-widget, .contador-seguros, .alerta-box {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #6B5FFF;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.donaciones-box h3, .redes-sociales h3, .chat-widget h3, .alerta-box h3 {
+    color: #6B5FFF;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.donacion-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: rgba(107, 95, 255, 0.1);
+    border-left: 3px solid #FF5F6D;
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.monto {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-icons a {
+    background: #6B5FFF;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.social-icons a:hover {
+    background: #FF5F6D;
+    transform: scale(1.05);
+}
+
+.chat-messages {
+    background: rgba(107, 95, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 5px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.chat-messages p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.contador-seguros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contador {
+    background: rgba(107, 95, 255, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contador h4 {
+    color: #6B5FFF;
+    margin-bottom: 0.5rem;
+}
+
+.contador p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.alerta-box {
+    background: linear-gradient(135deg, #FF5F6D 0%, #6B5FFF 100%);
+    text-align: center;
+    padding: 2rem;
+    animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.alerta-box h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.alerta-box p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Control Panel */
+.control-panel {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #6B5FFF;
+}
+
+.control-seccion {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #444;
+}
+
+.control-seccion:last-child {
+    border-bottom: none;
+}
+
+.control-seccion h3 {
+    color: #6B5FFF;
+    margin-bottom: 1rem;
+}
+
+.control-seccion input,
+.control-seccion select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.7rem;
+    background: #1a1a1a;
+    border: 2px solid #444;
+    color: white;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.control-seccion input:focus,
+.control-seccion select:focus {
+    outline: none;
+    border-color: #6B5FFF;
+}
+
+.control-seccion label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+    color: #aaa;
+}
+
+.control-seccion button {
+    background: linear-gradient(135deg, #6B5FFF 0%, #FF5F6D 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.control-seccion button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(107, 95, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .streamer-overlay {
+        grid-template-columns: 1fr;
+    }
+}

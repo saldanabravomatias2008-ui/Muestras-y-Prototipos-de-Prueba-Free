@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.pedidos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.formulario-pedido, .historial {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.productos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.productos-lista label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.productos-lista label:hover {
+    background: #f0f0f0;
+}
+
+.productos-lista input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #667eea;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background: #1fb854;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+#historial-pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pedido-item {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-left: 4px solid #667eea;
+    border-radius: 5px;
+}
+
+.pedido-item strong {
+    color: #333;
+}
+
+.pedido-item p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .pedidos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}

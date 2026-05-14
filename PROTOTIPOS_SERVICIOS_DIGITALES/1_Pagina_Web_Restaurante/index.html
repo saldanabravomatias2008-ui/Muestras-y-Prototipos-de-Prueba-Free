@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sabor - Restaurante Moderno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🍽️ El Sabor</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a El Sabor</h1>
+            <p>Experienza culinaria de primera clase</p>
+            <button class="btn-primary">Hacer Reserva</button>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>Nuestro Menú</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-icon">🍝</div>
+                <h3>Pasta Italiana</h3>
+                <p>$15.99</p>
+            </div>
+            <div class="menu-card">
+                <div class="menu-icon">🥩</div>
+                <h3>Carne Premium</h3>
+                <p>$24.99</p>
+            </div>
+            <div class="menu-card">
+                <div class="menu-icon">🐟</div>
+                <h3>Pescado Fresco</h3>
+                <p>$19.99</p>
+            </div>
+            <div class="menu-card">
+                <div class="menu-icon">🥗</div>
+                <h3>Ensaladas Gourmet</h3>
+                <p>$12.99</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="reservas">
+        <h2>Reserva tu Mesa</h2>
+        <form class="form-reserva">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <input type="date" required>
+            <input type="time" required>
+            <input type="number" placeholder="Número de personas" min="1" max="10" required>
+            <button type="submit" class="btn-primary">Confirmar Reserva</button>
+        </form>
+    </section>
+
+    <footer id="contacto">
+        <p>📍 Calle Principal 123 | 📱 +1 (555) 123-4567 | 📧 info@elsabor.com</p>
+        <p>&copy; 2024 El Sabor. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

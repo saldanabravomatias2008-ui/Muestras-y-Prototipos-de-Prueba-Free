@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaMax - Tu Tienda Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🛒 TiendaMax</div>
+            <div class="carrito-icon">
+                🛍️ <span id="carrito-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="productos">
+        <h1>Nuestros Productos</h1>
+        <div class="filtros">
+            <button class="filtro-btn active" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="electronicos">Electrónicos</button>
+            <button class="filtro-btn" data-filtro="ropa">Ropa</button>
+            <button class="filtro-btn" data-filtro="accesorios">Accesorios</button>
+        </div>
+
+        <div class="grid-productos">
+            <div class="producto" data-categoria="electronicos">
+                <div class="producto-imagen">📱</div>
+                <h3>Smartphone Pro</h3>
+                <p class="precio">$599.99</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+            <div class="producto" data-categoria="electronicos">
+                <div class="producto-imagen">💻</div>
+                <h3>Laptop Gaming</h3>
+                <p class="precio">$1,299.99</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+            <div class="producto" data-categoria="ropa">
+                <div class="producto-imagen">👕</div>
+                <h3>Camiseta Premium</h3>
+                <p class="precio">$29.99</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+            <div class="producto" data-categoria="ropa">
+                <div class="producto-imagen">👖</div>
+                <h3>Jeans Clásico</h3>
+                <p class="precio">$59.99</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+            <div class="producto" data-categoria="accesorios">
+                <div class="producto-imagen">⌚</div>
+                <h3>Reloj Inteligente</h3>
+                <p class="precio">$199.99</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+            <div class="producto" data-categoria="accesorios">
+                <div class="producto-imagen">🎧</div>
+                <h3>Auriculares Inalámbricos</h3>
+                <p class="precio">$149.99</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="carrito-section">
+        <h2>Carrito de Compras</h2>
+        <div id="carrito-items"></div>
+        <div class="carrito-total">
+            <p>Total: $<span id="total">0.00</span></p>
+            <button class="btn-comprar">Ir a Pagar</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 TiendaMax. Envíos gratis en compras mayores a $50</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

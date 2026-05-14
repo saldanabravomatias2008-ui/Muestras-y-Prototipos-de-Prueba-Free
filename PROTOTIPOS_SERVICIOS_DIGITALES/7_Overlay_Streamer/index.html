@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Streamer - Panel de Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="streamer-overlay">
+        <div class="preview-area">
+            <h2>Vista Previa del Overlay</h2>
+            
+            <div class="overlay-preview">
+                <div class="donaciones-box">
+                    <h3>🎁 Últimas Donaciones</h3>
+                    <div id="donaciones-lista">
+                        <div class="donacion-item">
+                            <span>Juan</span>
+                            <span class="monto">$5.00</span>
+                        </div>
+                        <div class="donacion-item">
+                            <span>María</span>
+                            <span class="monto">$10.00</span>
+                        </div>
+                        <div class="donacion-item">
+                            <span>Carlos</span>
+                            <span class="monto">$2.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="redes-sociales">
+                    <h3>Sígueme en:</h3>
+                    <div class="social-icons">
+                        <a href="#">📺 Twitch</a>
+                        <a href="#">▶️ YouTube</a>
+                        <a href="#">📱 TikTok</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+
+                <div class="chat-widget">
+                    <h3>💬 Chat en Vivo</h3>
+                    <div class="chat-messages">
+                        <p><strong>usuario1:</strong> ¡Hola!</p>
+                        <p><strong>usuario2:</strong> Increíble stream</p>
+                    </div>
+                </div>
+
+                <div class="contador-seguros">
+                    <div class="contador">
+                        <h4>Espectadores</h4>
+                        <p id="viewers">1,234</p>
+                    </div>
+                    <div class="contador">
+                        <h4>Seguidores</h4>
+                        <p id="followers">5,678</p>
+                    </div>
+                </div>
+
+                <div class="alerta-box" id="alerta-box" style="display:none;">
+                    <h3>🎉 ¡ALERTA DE SUSCRIPTOR!</h3>
+                    <p id="alerta-nombre"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <h2>Panel de Control</h2>
+            
+            <div class="control-seccion">
+                <h3>Añadir Donación</h3>
+                <input type="text" id="donor-name" placeholder="Nombre del donante">
+                <input type="number" id="donor-amount" placeholder="Monto ($)">
+                <button onclick="agregarDonacion()">Añadir Donación</button>
+            </div>
+
+            <div class="control-seccion">
+                <h3>Actualizar Contadores</h3>
+                <label>
+                    Espectadores:
+                    <input type="number" id="viewers-input" value="1234" style="width: 100px;">
+                </label>
+                <label>
+                    Seguidores:
+                    <input type="number" id="followers-input" value="5678" style="width: 100px;">
+                </label>
+                <button onclick="actualizarContadores()">Actualizar</button>
+            </div>
+
+            <div class="control-seccion">
+                <h3>Alerta de Suscriptor</h3>
+                <input type="text" id="suscriptor-nombre" placeholder="Nombre del suscriptor">
+                <button onclick="mostrarAlerta()">Mostrar Alerta</button>
+            </div>
+
+            <div class="control-seccion">
+                <h3>Mensajes Personalizados</h3>
+                <select id="mensajes-select" onchange="aplicarMensaje()">
+                    <option value="">Selecciona un mensaje...</option>
+                    <option value="¡Sígueme en mis redes sociales!">Sígueme en redes</option>
+                    <option value="No olvides activar las notificaciones">Activar notificaciones</option>
+                    <option value="Únete a mi comunidad de Discord">Discord</option>
+                </select>
+            </div>
+
+            <div class="control-seccion">
+                <h3>Opciones</h3>
+                <button onclick="copiarEnlace()">📋 Copiar Enlace del Overlay</button>
+                <button onclick="alternarPantallaBg()">🌙 Cambiar Fondo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

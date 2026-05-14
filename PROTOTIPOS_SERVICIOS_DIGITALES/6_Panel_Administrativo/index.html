@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">⚙️ Admin Panel</div>
+            <nav class="menu">
+                <button class="menu-item active" onclick="mostrarSeccion('inicio')">📊 Dashboard</button>
+                <button class="menu-item" onclick="mostrarSeccion('usuarios')">👥 Usuarios</button>
+                <button class="menu-item" onclick="mostrarSeccion('pedidos')">📦 Pedidos</button>
+                <button class="menu-item" onclick="mostrarSeccion('ganancias')">💰 Ganancias</button>
+                <button class="menu-item" onclick="mostrarSeccion('reportes')">📈 Reportes</button>
+                <button class="menu-item" onclick="mostrarSeccion('configuracion')">⚙️ Configuración</button>
+            </nav>
+        </aside>
+
+        <main class="contenido">
+            <header class="topbar">
+                <h1 id="titulo-seccion">Dashboard Principal</h1>
+                <div class="user-info">👤 Admin | Salir</div>
+            </header>
+
+            <!-- Dashboard -->
+            <section id="inicio" class="seccion active">
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-icon">👥</div>
+                        <h3>Usuarios</h3>
+                        <p class="numero">1,284</p>
+                        <small>+12% este mes</small>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📦</div>
+                        <h3>Pedidos</h3>
+                        <p class="numero">542</p>
+                        <small>+28% este mes</small>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💰</div>
+                        <h3>Ingresos</h3>
+                        <p class="numero">$24,580</p>
+                        <small>+15% este mes</small>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⭐</div>
+                        <h3>Calificación</h3>
+                        <p class="numero">4.8/5</p>
+                        <small>De 2,341 reseñas</small>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Ventas por Mes</h2>
+                    <div class="chart">
+                        <div class="bar" style="height: 40%;"></div>
+                        <div class="bar" style="height: 50%;"></div>
+                        <div class="bar" style="height: 60%;"></div>
+                        <div class="bar" style="height: 75%;"></div>
+                        <div class="bar" style="height: 85%;"></div>
+                        <div class="bar" style="height: 90%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usuarios -->
+            <section id="usuarios" class="seccion">
+                <h2>Gestión de Usuarios</h2>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Juan García</td>
+                            <td>juan@email.com</td>
+                            <td><span class="badge activo">Activo</span></td>
+                            <td><button class="btn-small">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>María López</td>
+                            <td>maria@email.com</td>
+                            <td><span class="badge activo">Activo</span></td>
+                            <td><button class="btn-small">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Carlos Ruiz</td>
+                            <td>carlos@email.com</td>
+                            <td><span class="badge inactivo">Inactivo</span></td>
+                            <td><button class="btn-small">Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Pedidos -->
+            <section id="pedidos" class="seccion">
+                <h2>Pedidos Recientes</h2>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Orden</th>
+                            <th>Cliente</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-001</td>
+                            <td>Juan García</td>
+                            <td>$150.00</td>
+                            <td><span class="badge entregado">Entregado</span></td>
+                            <td>2024-05-10</td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-002</td>
+                            <td>María López</td>
+                            <td>$320.50</td>
+                            <td><span class="badge pendiente">Pendiente</span></td>
+                            <td>2024-05-12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Ganancias -->
+            <section id="ganancias" class="seccion">
+                <h2>Análisis de Ganancias</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h4>Ganancia Total</h4>
+                        <p class="stat-value">$125,450</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Ganancia Neta</h4>
+                        <p class="stat-value">$98,320</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Margen de Ganancia</h4>
+                        <p class="stat-value">78.3%</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Promedio por Venta</h4>
+                        <p class="stat-value">$230.50</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reportes -->
+            <section id="reportes" class="seccion">
+                <h2>Reportes</h2>
+                <p>Descargar reportes en diferentes formatos:</p>
+                <button class="btn-descarga">📄 PDF</button>
+                <button class="btn-descarga">📊 Excel</button>
+                <button class="btn-descarga">📋 CSV</button>
+            </section>
+
+            <!-- Configuración -->
+            <section id="configuracion" class="seccion">
+                <h2>Configuración</h2>
+                <form class="form-config">
+                    <label>
+                        <span>Nombre de la Empresa:</span>
+                        <input type="text" value="Mi Empresa" required>
+                    </label>
+                    <label>
+                        <span>Email de Contacto:</span>
+                        <input type="email" value="info@empresa.com" required>
+                    </label>
+                    <label>
+                        <span>Teléfono:</span>
+                        <input type="tel" value="+1 (555) 123-4567" required>
+                    </label>
+                    <button type="submit" class="btn-guardar">💾 Guardar Cambios</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

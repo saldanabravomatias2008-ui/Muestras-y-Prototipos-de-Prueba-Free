@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Prototipos - Servicios Digitales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .prototipos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .prototipo-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .prototipo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-header h2 {
+            font-size: 1.5rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .card-body p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .card-body ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+        
+        .card-body li {
+            padding: 0.3rem 0;
+            color: #666;
+        }
+        
+        .card-body li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .card-footer {
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        
+        .btn-abrir {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .btn-abrir:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .info-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .info-section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .info-section p {
+            color: #666;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Portfolio de Servicios Digitales</h1>
+            <p>10 Prototipos Profesionales Listos para Mostrar a tus Clientes</p>
+        </header>
+        
+        <div class="prototipos-grid">
+            <!-- 1. Restaurante -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">🍽️</div>
+                    <h2>Página Web Restaurante</h2>
+                </div>
+                <div class="card-body">
+                    <p>Sitio moderno para restaurantes con menú, reservas y contacto</p>
+                    <ul>
+                        <li>Menú digital interactivo</li>
+                        <li>Sistema de reservas</li>
+                        <li>Información de contacto</li>
+                        <li>Diseño responsivo</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('1_Pagina_Web_Restaurante')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 2. Tienda Online -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">🛒</div>
+                    <h2>Tienda Online</h2>
+                </div>
+                <div class="card-body">
+                    <p>E-commerce completo con carrito de compras funcional</p>
+                    <ul>
+                        <li>Catálogo de productos</li>
+                        <li>Carrito dinámico</li>
+                        <li>Filtros por categoría</li>
+                        <li>Cálculo de totales</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('2_Tienda_Online')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 3. Pedidos WhatsApp -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">📱</div>
+                    <h2>Sistema de Pedidos WhatsApp</h2>
+                </div>
+                <div class="card-body">
+                    <p>Integración con WhatsApp para automatizar pedidos</p>
+                    <ul>
+                        <li>Selección de productos</li>
+                        <li>Envío por WhatsApp</li>
+                        <li>Historial de pedidos</li>
+                        <li>Cálculo automático</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('3_Sistema_Pedidos_WhatsApp')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 4. Bot de Automatización -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">🤖</div>
+                    <h2>Bot Inteligente</h2>
+                </div>
+                <div class="card-body">
+                    <p>Asistente virtual para atender clientes automáticamente</p>
+                    <ul>
+                        <li>Chat conversacional</li>
+                        <li>Respuestas automáticas</li>
+                        <li>Botones rápidos</li>
+                        <li>Historial de conversaciones</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('4_Bot_Automatizacion')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 5. Minijuego -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">🎮</div>
+                    <h2>Minijuego Interactivo</h2>
+                </div>
+                <div class="card-body">
+                    <p>Juego gamificado para aumentar engagement</p>
+                    <ul>
+                        <li>Mecánicas de juego</li>
+                        <li>Sistema de puntuación</li>
+                        <li>Leaderboard</li>
+                        <li>Animaciones suaves</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('5_Minijuego_Interactivo')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 6. Panel Administrativo -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">⚙️</div>
+                    <h2>Panel Administrativo</h2>
+                </div>
+                <div class="card-body">
+                    <p>Dashboard completo para gestionar tu negocio</p>
+                    <ul>
+                        <li>Estadísticas en tiempo real</li>
+                        <li>Gestión de usuarios y pedidos</li>
+                        <li>Reportes descargables</li>
+                        <li>Configuración personalizada</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('6_Panel_Administrativo')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 7. Overlay Streamer -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">🎥</div>
+                    <h2>Overlay para Streamers</h2>
+                </div>
+                <div class="card-body">
+                    <p>Panel personalizable para transmisiones en vivo</p>
+                    <ul>
+                        <li>Donaciones en tiempo real</li>
+                        <li>Alertas de suscriptores</li>
+                        <li>Contadores personalizados</li>
+                        <li>Widgets interactivos</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('7_Overlay_Streamer')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 8. Landing Page -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">📈</div>
+                    <h2>Landing Page de Ventas</h2>
+                </div>
+                <div class="card-body">
+                    <p>Página de conversión optimizada para ventas</p>
+                    <ul>
+                        <li>Héroe impactante</li>
+                        <li>Planes de precios</li>
+                        <li>Testimonios de clientes</li>
+                        <li>CTA estratégicos</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('8_Landing_Page_Ventas')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 9. Barbería -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">💈</div>
+                    <h2>Sistema de Reservas Barbería</h2>
+                </div>
+                <div class="card-body">
+                    <p>Plataforma de reservas para servicios de belleza</p>
+                    <ul>
+                        <li>Catálogo de servicios</li>
+                        <li>Sistema de reservas</li>
+                        <li>Selección de barbero</li>
+                        <li>Historial de citas</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('9_Barberia_Reservas')">Ver Prototipo</button>
+                </div>
+            </div>
+            
+            <!-- 10. Gimnasio -->
+            <div class="prototipo-card">
+                <div class="card-header">
+                    <div class="card-icon">💪</div>
+                    <h2>Gimnasio - Sistema de Membresías</h2>
+                </div>
+                <div class="card-body">
+                    <p>Plataforma premium para gimnasios y centros de fitness</p>
+                    <ul>
+                        <li>Catálogo de clases</li>
+                        <li>Planes de membresía</li>
+                        <li>Perfil de entrenadores</li>
+                        <li>Beneficios destacados</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-abrir" onclick="abrirProototipo('10_Gimnasio_Membresias')">Ver Prototipo</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Información adicional -->
+        <div class="info-section">
+            <h2>📌 Cómo Usar Este Portfolio</h2>
+            <p><strong>Estos prototipos son:</strong></p>
+            <p>✅ Completamente funcionales y listos para mostrar<br>
+            ✅ Responsivos y optimizados para dispositivos móviles<br>
+            ✅ Personalizables según las necesidades de cada cliente<br>
+            ✅ Desarrollados con HTML, CSS y JavaScript moderno<br>
+            ✅ Sin dependencias externas - Funcionan en cualquier navegador</p>
+        </div>
+        
+        <div class="info-section">
+            <h2>🎯 Casos de Uso</h2>
+            <p><strong>Ideal para:</strong></p>
+            <p>🍔 Restaurantes y cafeterías<br>
+            💈 Barberías y salones de belleza<br>
+            🏋️ Gimnasios y centros fitness<br>
+            🛍️ Tiendas online y e-commerce<br>
+            🎮 Streamers y creadores de contenido<br>
+            🏢 Emprendimientos y negocios digitales</p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 - Servicios Digitales Personalizados</p>
+            <p>Todos los prototipos están listos para ser personalizados según tus necesidades</p>
+        </footer>
+    </div>
+    
+    <script>
+        function abrirProototipo(carpeta) {
+            window.open(carpeta + '/index.html', '_blank');
+        }
+    </script>
+</body>
+</html>

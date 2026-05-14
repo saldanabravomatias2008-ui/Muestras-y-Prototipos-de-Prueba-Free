@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - Atrapa las Monedas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🎮 Atrapa las Monedas</h1>
+            <div class="game-stats">
+                <span>Puntuación: <strong id="score">0</strong></span>
+                <span>Tiempo: <strong id="timer">30</strong>s</span>
+            </div>
+        </div>
+
+        <div id="game-area" class="game-area">
+            <div class="canasta">🧺</div>
+        </div>
+
+        <div class="game-controls">
+            <button id="start-btn" class="btn-start">Comenzar Juego</button>
+            <button id="restart-btn" class="btn-restart" style="display:none;">Reiniciar</button>
+            <p id="game-message"></p>
+        </div>
+
+        <div class="leaderboard">
+            <h3>🏆 Mejores Puntuaciones</h3>
+            <ol id="leaderboard-list"></ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
